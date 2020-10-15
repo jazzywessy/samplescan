@@ -1,1 +1,1 @@
-FROM jupyter/all-spark-notebook
+FROM alpine:3.7
