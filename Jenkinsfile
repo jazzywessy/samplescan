@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build image') {
       steps {
-        sh 'docker login -u ${USERNAME} -p ${PASSWORD} 192.168.50.246:9083'
+        sh 'docker login -u ${username} -p ${password} 192.168.50.246:9083'
         sh '''docker.withRegistry(\'http://192.168.50.246:9083\') {
     	docker.build(registry).push(\'latest\')
      }}'''
